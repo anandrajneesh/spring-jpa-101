@@ -5,31 +5,36 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication(scanBasePackages = {
         //"com.gluecoders.databasesqlexample.basics"
         //,"com.gluecoders.databasesqlexample.customids"
         //,"com.gluecoders.databasesqlexample.onetomany"
         //,"com.gluecoders.databasesqlexample.onetoone"
+        //,"com.gluecoders.databasesqlexample.manytomany"
         //,
-         "com.gluecoders.databasesqlexample.manytomany"
+        "com.gluecoders.databasesqlexample.transactions"
 })
 @EnableJpaRepositories(basePackages = {
         //"com.gluecoders.databasesqlexample.basics"
         //,"com.gluecoders.databasesqlexample.customids"
         //,"com.gluecoders.databasesqlexample.onetomany"
         //,"com.gluecoders.databasesqlexample.onetoone"
+        //,"com.gluecoders.databasesqlexample.manytomany"
         //,
-         "com.gluecoders.databasesqlexample.manytomany"
+        "com.gluecoders.databasesqlexample.transactions"
 })
 @EntityScan(basePackages = {
         //"com.gluecoders.databasesqlexample.basics"
         //,"com.gluecoders.databasesqlexample.customids"
         //,"com.gluecoders.databasesqlexample.onetomany"
         //,"com.gluecoders.databasesqlexample.onetoone"
+        //,"com.gluecoders.databasesqlexample.manytomany"
         //,
-        "com.gluecoders.databasesqlexample.manytomany"
+        "com.gluecoders.databasesqlexample.transactions"
 })
+@EnableTransactionManagement
 public class DatabaseSqlExampleApplication {
 
     public static void main(String[] args) {
